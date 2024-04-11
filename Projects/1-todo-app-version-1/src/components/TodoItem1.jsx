@@ -2,7 +2,7 @@
 function TodoItem1() {
 
   let todoName='Buy Milk';
-  let todoDate='4/10/2023';
+  let todoDate='5/10/2023';
 
   return <div className="container">
 
