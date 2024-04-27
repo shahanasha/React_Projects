@@ -26,17 +26,23 @@ function App() {
 
   const hanldeNewItem = (itemName, itemDueDate) => {
 
-    const newTodoItems = [ ...todoItems,
+    // setTodoItems((currValue) => {
+    //   const newTodoItems = [
+    //     ...currValue,
+    //     { name: itemName, dueDate: itemDueDate },
+    //   ];
+    //   return newTodoItems;
+    // });
+    
+    setTodoItems((currValue) => [
+      ...currValue,
       { name: itemName, dueDate: itemDueDate },
-    ];
-    setTodoItems(newTodoItems);
-
+    ]);
   }
 
   const handleDeleteItem = (todoItemName) => {
     const newTodoItems = todoItems.filter(item => item.name !== todoItemName);
     setTodoItems(newTodoItems);
-
   }
 
   return (
